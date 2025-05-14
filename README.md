@@ -12,9 +12,14 @@ An nvim plugin that reminds you to drink water.
 ## Requirements
 
 - Neovim 0.10+
+
+## Optional
+
 - nvim-notify
 
 ## Installation
+
+Waterme supports `nvim-notify` to push notifications to their popup. This is optional and can be removed from the dependencies in the following code blocks.
 
 <details>
     <summary>lazy.nvim</summary>
@@ -57,4 +62,4 @@ require("nvim-waterme").setup({
 })
 ```
 
-Vim highlight `WatermeNormal` can also be changed to customize the notification border.
+Vim highlight `WatermeNormal` can also be changed to customize the notification border of `nvim-notify`.
