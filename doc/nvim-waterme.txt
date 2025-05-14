@@ -1,54 +1,62 @@
 ==============================================================================
 ------------------------------------------------------------------------------
+*nvim-waterme* Reminder to hydrate yourself
+*Waterme*
 
-A simple plugin to remind you to drink water.
+GPL-3.0 License Copyright (c) 2024 Steven Thorne
+
+============================================================================== 
+
+Features:
+- Set up in-editor reminders to hydrate yourself.
+
+# Setup ~
+
+This plugin doesn't require setup, but optional configuration
+exists to improve your experience.
+Setup with `require('nvim-waterme'.setup({})` (replace `{}` with
+your `config` table).
+
+See |Waterme.config| for `config` structure and default values.
 
 ------------------------------------------------------------------------------
-                                                                       *waterme*
-                                   `waterme`
-Class ~
-{waterme}
-
-------------------------------------------------------------------------------
-                                                               *waterme.setup()*
-                            `waterme.setup`({opts})
-Configure waterme
-  See: ~
-      |waterme.Config|
+                                                               *Waterme.setup()*
+                           `Waterme.setup`({config})
+Configure Waterme
 
 Parameters ~
-{opts} `(waterme.Config|nil)`
+{config} `(table|nil)` Module config table. See |Waterme.config|.
+
+Usage ~
+>lua
+  require("nvim-waterme").setup() -- use default config
+  -- OR
+  require("nvim-waterme").setup({}) -- replace {} with your config table
+<
+------------------------------------------------------------------------------
+                                                                *Waterme.config*
+                                `Waterme.config`
+Plugin config
+
 Default values:
 >lua
-  {
+  Waterme.config = {
+    -- How often the notification should appear (in seconds)
     interval = 900,
-    message = "Time to drink water!"
+    message = "Time to drink water!",
   }
 <
 ------------------------------------------------------------------------------
-                                                     *waterme.schedule_notify()*
-                     `waterme.schedule_notify`({interval})
+                                                     *Waterme.schedule_notify()*
+                       `Waterme.schedule_notify`({delay})
 Schedule function for waterme. Schedules a timer to notify the user to drink water.
 Parameters ~
-{interval} `(number)` Interval in seconds to notify the user to drink water
+{delay} `(number)` Delay (in seconds) before notifying the user to drink water
 
 ------------------------------------------------------------------------------
-                                                              *waterme.notify()*
-                               `waterme.notify`()
+                                                              *Waterme.notify()*
+                               `Waterme.notify`()
 Notify function for waterme. Displays a notification to the user to drink water.
-
-
-==============================================================================
-------------------------------------------------------------------------------
-                                                                *waterme.config*
-                                    `Config`
-
-------------------------------------------------------------------------------
-Class ~
-{waterme.Config}
-Fields ~
-{interval} `(number)` Interval in seconds to notify the user to drink water
-{message} `(string)` Message to display to the user when it is time to drink water
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:

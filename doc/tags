@@ -1,5 +1,6 @@
-waterme	nvim-waterme.txt	/*waterme*
-waterme.config	nvim-waterme.txt	/*waterme.config*
-waterme.notify()	nvim-waterme.txt	/*waterme.notify()*
-waterme.schedule_notify()	nvim-waterme.txt	/*waterme.schedule_notify()*
-waterme.setup()	nvim-waterme.txt	/*waterme.setup()*
+Waterme	nvim-waterme.txt	/*Waterme*
+Waterme.config	nvim-waterme.txt	/*Waterme.config*
+Waterme.notify()	nvim-waterme.txt	/*Waterme.notify()*
+Waterme.schedule_notify()	nvim-waterme.txt	/*Waterme.schedule_notify()*
+Waterme.setup()	nvim-waterme.txt	/*Waterme.setup()*
+nvim-waterme	nvim-waterme.txt	/*nvim-waterme*
